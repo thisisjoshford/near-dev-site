@@ -145,10 +145,144 @@ nav {
   margin-right: auto;
 }
 
+/* About Home Section */
+.about-home {
+  padding: 4rem 0;
+  background: #0a0a0a;
+}
+
+.about-home .section-title {
+  margin-bottom: 0;
+}
+
+.about-home .about-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+/* About Us & Teams Section */
+.about-teams {
+  padding: 5rem 0;
+  background: #0a0a0a;
+  margin-top: 80px; /* Add space for fixed header on About page */
+}
+
+.teams-section {
+  margin-top: 4rem;
+}
+
+.teams-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.team-card {
+  background: #1a1a1a;
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.team-card.visible {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #0088ff, #0066cc);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border-color: #444;
+}
+
+.team-card:hover::before {
+  transform: scaleX(1);
+}
+
+.team-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.team-description {
+  color: #b8b8b8;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.team-features {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.team-features li {
+  color: #b8b8b8;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.team-features li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #0088ff;
+  font-weight: bold;
+}
+
+.team-link {
+  color: #0088ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.team-link:hover {
+  color: #0066cc;
+}
+
 /* Services Section */
 .services {
   padding: 5rem 0;
   background: #111111;
+}
+
+.about-link {
+  color: #0088ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.about-link:hover {
+  color: #0066cc;
 }
 
 .section-title {
@@ -449,6 +583,7 @@ footer p {
   }
 
   .services-grid,
+  .teams-grid,
   .partners-grid,
   .process-steps,
   .contact-methods {
