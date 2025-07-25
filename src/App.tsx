@@ -1,58 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
-const TypingAnimation = () => {
-  const phrases = [
-    'Developer Relations Services', 
-    'Essential DevTools Support',
-    'Live Event Technical Support',
-    'Unique Software Solutions'
-  ]
-  
-  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0)
-  const [currentText, setCurrentText] = useState('')
-  const [isDeleting, setIsDeleting] = useState(false)
-  const [isPaused, setIsPaused] = useState(false)
-
-  useEffect(() => {
-    const currentPhrase = phrases[currentPhraseIndex]
-    
-    const timeout = setTimeout(() => {
-      if (isPaused) {
-        setIsPaused(false)
-        setIsDeleting(true)
-        return
-      }
-
-      if (isDeleting) {
-        // Deleting characters
-        setCurrentText(currentPhrase.substring(0, currentText.length - 1))
-        
-        if (currentText.length === 1) {
-          setIsDeleting(false)
-          setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length)
-        }
-      } else {
-        // Typing characters
-        setCurrentText(currentPhrase.substring(0, currentText.length + 1))
-        
-        if (currentText === currentPhrase) {
-          setIsPaused(true)
-        }
-      }
-    }, isPaused ? 2000 : isDeleting ? 50 : 100)
-
-    return () => clearTimeout(timeout)
-  }, [currentText, isDeleting, isPaused, currentPhraseIndex, phrases])
-
-  return (
-    <span>
-      {currentText}
-      <span className="typing-cursor">|</span>
-    </span>
-  )
-}
-
 function App() {
   const [headerBackground, setHeaderBackground] = useState('rgba(10, 10, 10, 0.95)')
   const [headerBorder, setHeaderBorder] = useState('1px solid #333')
@@ -108,7 +56,10 @@ function App() {
       {/* Header */}
       <header style={{ background: headerBackground, borderBottom: headerBorder }}>
         <nav className="container">
-          <a href="#" className="logo">NEAR Dev</a>
+          <a href="#" className="logo">
+            <img src="/LOGO-ICON.png" alt="NEAR Dev" className="logo-icon" />
+            NEAR Dev
+          </a>
           <ul className="nav-links">
             <li><a href="#services" onClick={(e) => handleSmoothScroll(e, '#services')}>Services</a></li>
             <li><a href="#partners" onClick={(e) => handleSmoothScroll(e, '#partners')}>Partners</a></li>
@@ -123,9 +74,9 @@ function App() {
       <section className="hero">
         <div className="container">
           <div className="hero-content">
-            <h1>NEAR Developer Success Partners</h1>
-            <h2 className="hero-subheader"><TypingAnimation /></h2>
-            <p>Collaborating with NEAR ecosystem partners to provide technical support and solutions</p>
+            <img src="/near-dev-logo.png" alt="NEAR Dev Logo" className="hero-logo" />
+            <h1>Your Developer Success Partners</h1>
+            <p>Collaborating with NEAR ecosystem leaders to create exceptional developer experiences that accelerate adoption.</p>
             <a href="#contact" className="cta-button" onClick={(e) => handleSmoothScroll(e, '#contact')}>Partner with Us</a>
           </div>
         </div>
@@ -136,34 +87,13 @@ function App() {
         <div className="container">
           <div className="section-title">
             <h2>Our Core Services</h2>
-            <p>Comprehensive technical support and development services tailored for NEAR ecosystem partners</p>
           </div>
           <div className="services-grid">
-            <div className="service-card">
-              <div className="service-icon">🛠️</div>
-              <h3>Technical Support</h3>
-              <p>Expert guidance for top ecosystem partners with dedicated support and 24-hour response times.</p>
-              <ul className="service-features">
-                <li>Integration with NEAR protocols and APIs</li>
-                <li>Technical challenge resolution</li>
-                <li>Dedicated support for live applications</li>
-                <li>Priority response within 24 hours</li>
-              </ul>
-            </div>
-            <div className="service-card">
-              <div className="service-icon">⚡</div>
-              <h3>Solutions Development</h3>
-              <p>Custom software solutions designed to address your specific technical needs and challenges.</p>
-              <ul className="service-features">
-                <li>Building new tools and features</li>
-                <li>External service integrations</li>
-                <li>Proof-of-concept development</li>
-                <li>Technical architecture guidance</li>
-              </ul>
-            </div>
-            <div className="service-card">
-              <div className="service-icon">📚</div>
-              <h3>Technical Content</h3>
+          <div className="service-card">
+              <div className="service-header">
+                <div className="service-icon">📚</div>
+                <h3>Technical Content</h3>
+              </div>
               <p>High-quality documentation, tutorials, and examples to accelerate your development process.</p>
               <ul className="service-features">
                 <li>Comprehensive developer documentation</li>
@@ -173,14 +103,42 @@ function App() {
               </ul>
             </div>
             <div className="service-card">
-              <div className="service-icon">🎯</div>
-              <h3>Event Support</h3>
+              <div className="service-header">
+                <div className="service-icon">🛠️</div>
+                <h3>Technical Support</h3>
+              </div>
+              <p>Expert guidance for top ecosystem partners with dedicated support and 24-hour response times.</p>
+              <ul className="service-features">
+                <li>Integration with NEAR protocols and APIs</li>
+                <li>Technical challenge resolution</li>
+                <li>Dedicated support for live applications</li>
+                <li>Priority response within 24 hours</li>
+              </ul>
+            </div>
+            <div className="service-card">
+              <div className="service-header">
+                <div className="service-icon">🎯</div>
+                <h3>Event Support</h3>
+              </div>
               <p>On-site technical presence, workshops, and mentorship for community events and conferences.</p>
               <ul className="service-features">
                 <li>Workshop facilitation</li>
                 <li>Hackathon judging and mentorship</li>
                 <li>Conference representation</li>
                 <li>Community engagement</li>
+              </ul>
+            </div>
+            <div className="service-card">
+              <div className="service-header">
+                <div className="service-icon">⚡</div>
+                <h3>Solutions Development</h3>
+              </div>
+              <p>Custom software solutions designed to address your specific technical needs and challenges.</p>
+              <ul className="service-features">
+                <li>Building new tools and features</li>
+                <li>External service integrations</li>
+                <li>Proof-of-concept development</li>
+                <li>Technical architecture guidance</li>
               </ul>
             </div>
           </div>
