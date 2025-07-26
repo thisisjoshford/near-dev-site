@@ -1,8 +1,12 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import Typed from 'typed.js'
 
 function Home() {
+  const typedRef = useRef<HTMLSpanElement>(null)
+
   useEffect(() => {
+    // Initialize intersection observer for other animations
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -19,7 +23,30 @@ function Home() {
     const cards = document.querySelectorAll('.service-card, .partner-card, .process-step')
     cards.forEach(card => observer.observe(card))
 
-    return () => observer.disconnect()
+    // Initialize typed.js
+    const typed = new Typed(typedRef.current, {
+      strings: [
+        'developer_support',
+        'documentation', 
+        'examples_and_tutorials',
+        'developer_tooling',
+        'event_support',
+        'developer_relations',
+        'solutions_development'
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 1500,
+      startDelay: 500,
+      loop: true,
+      showCursor: true,
+      cursorChar: '┃'
+    })
+
+    return () => {
+      observer.disconnect()
+      typed.destroy()
+    }
   }, [])
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -42,6 +69,21 @@ function Home() {
             <img src="/near-dev-logo.png" alt="NEAR Dev Logo" className="hero-logo" />
             <h1>Your Developer Success Partners</h1>
             <p>Collaborating with NEAR ecosystem leaders to create exceptional developer experiences that accelerate adoption.</p>
+            
+            {/* Terminal Typing Effect */}
+            <div className="terminal-container">
+              <div className="terminal-window">
+                <div className="terminal-header">
+                  <span className="terminal-dot red"></span>
+                  <span className="terminal-dot yellow"></span>
+                  <span className="terminal-dot green"></span>
+                </div>
+                <div className="terminal-body">
+                  <span className="terminal-prompt">$ near dev --service=</span><span ref={typedRef} className="typed-element"></span>
+                </div>
+              </div>
+            </div>
+            
             <a href="#contact" className="cta-button" onClick={(e) => handleSmoothScroll(e, '#contact')}>Partner with Us</a>
           </div>
         </div>
