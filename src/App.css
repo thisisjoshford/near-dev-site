@@ -589,6 +589,46 @@ footer p {
   .contact-methods {
     grid-template-columns: 1fr;
   }
+
+  /* Mobile Terminal Styles */
+  .terminal-container {
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+  }
+
+  .terminal-window {
+    min-width: 280px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .terminal-header {
+    padding: 8px 12px;
+  }
+
+  .terminal-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .terminal-body {
+    padding: 16px;
+    font-size: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .terminal-prompt {
+    display: block;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .typed-element {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+  }
 }
 
 /* Terminal Rotating Text */
@@ -603,8 +643,8 @@ footer p {
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  min-width: 600px;
-  max-width: 750px;
+  min-width: 500px;
+  max-width: 600px;
 }
 
 .terminal-header {
@@ -636,7 +676,7 @@ footer p {
 .terminal-body {
   padding: 24px;
   font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
-  font-size: 20px;
+  font-size: 18px;
   color: #00ff00;
   background: #0a0a0a;
   line-height: 1.4;

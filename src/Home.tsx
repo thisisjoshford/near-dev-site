@@ -28,7 +28,7 @@ function Home() {
       strings: [
         'developer_support',
         'documentation', 
-        'examples_and_tutorials',
+        'examples_and_guides',
         'developer_tooling',
         'event_support',
         'developer_relations',
@@ -79,7 +79,7 @@ function Home() {
                   <span className="terminal-dot green"></span>
                 </div>
                 <div className="terminal-body">
-                  <span className="terminal-prompt">$ near dev --service=</span><span ref={typedRef} className="typed-element"></span>
+                  <span className="terminal-prompt">$ near_dev --service=</span><span ref={typedRef} className="typed-element"></span>
                 </div>
               </div>
             </div>
@@ -93,8 +93,8 @@ function Home() {
       <section className="about-home">
         <div className="container">
           <div className="section-title">
-            <h2>Who is NEAR Dev?</h2>
-            <p>NEAR Dev is a technical leadership team that mobilizes DevHub community contributors to deliver essential developer resources across the NEAR ecosystem. We work in collaboration with ecosystem partners to identify and address their technical needs.</p>
+            <h2>What is NEAR Dev?</h2>
+            <p>NEAR Dev ensures developers have the resources they need to build successfully on NEAR. Our technical team collaborates with ecosystem partners to identify gaps, then mobilizes DevHub community contributors to create the tools, guides, and infrastructure that address these needs.</p>
             <Link to="/about" className="about-link">Learn more about our teams →</Link>
           </div>
         </div>
