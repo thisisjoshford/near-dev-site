@@ -147,10 +147,38 @@ nav {
 .about-home {
   padding: 4rem 0;
   background: #0a0a0a;
+  color: #ffffff;
+  text-align: center;
 }
 
 .about-home .section-title {
-  margin-bottom: 0;
+  margin-bottom: 2rem;
+}
+
+.about-home h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.about-home h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.about-home p {
+  font-size: 1.2rem;
+  color: #b8b8b8;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+.about-home br {
+  margin-bottom: 1.5rem;
 }
 
 .about-home .about-link {

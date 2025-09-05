@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import Typed from 'typed.js'
 
 function Home() {
@@ -68,7 +67,7 @@ function Home() {
           <div className="hero-content">
             <img src="/near-dev-logo.png" alt="NEAR Dev Logo" className="hero-logo" />
             <h1>Your Developer Success Partners</h1>
-            <p>Collaborating with NEAR ecosystem leaders to create exceptional developer experiences that accelerate adoption.</p>
+            <p>We collaborate with NEAR ecosystem leaders to create execeptional developer experiences that accelerate adoption.</p>
             
             {/* Terminal Typing Effect */}
             <div className="terminal-container">
@@ -94,8 +93,12 @@ function Home() {
         <div className="container">
           <div className="section-title">
             <h2>What is NEAR Dev?</h2>
-            <p>NEAR Dev ensures developers have the resources they need to build successfully on NEAR. Our technical team collaborates with ecosystem partners to identify gaps, then mobilizes DevHub community contributors to create the tools, guides, and infrastructure that address these needs.</p>
-            <Link to="/about" className="about-link">Learn more about our teams →</Link>
+            <p>NEAR Dev is the technical services team for the NEAR ecosystem. We provide core developer tooling and infrastructure, along with dedicated expert support, to help projects and partners succeed.</p>
+            <br/>
+            <h3>Our Connection to DevHub</h3>
+            <p>DevHub is a community initiative where developers build for other developers — sharing ideas, tools, and projects to grow the NEAR ecosystem. It’s like a town square full of collaboration and creativity.</p> 
+            <br/>
+            <p> NEAR Dev works alongside this community like a municipal services department: ensuring the critical infrastructure works, key services are maintained, and partners get the dedicated support they need.</p>
           </div>
         </div>
       </section>
