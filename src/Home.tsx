@@ -169,7 +169,7 @@ function Home() {
             <div className="contact-method">
               <h4>General Technical Questions</h4>
               <p>Join our community for discussions:</p>
-              <a href="#">NEAR Dev Telegram Channel</a>
+              <a href="https://t.me/neardev">NEAR Dev Telegram Channel</a>
             </div>
           </div>
         </div>
