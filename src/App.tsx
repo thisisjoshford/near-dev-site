@@ -58,11 +58,7 @@ function Header() {
             </>
           )}
         </ul>
-        {isHomePage ? (
-          <a href="#contact" className="cta-button" onClick={(e) => handleSmoothScroll(e, '#contact')}>Get Support</a>
-        ) : (
-          <Link to="/#contact" className="cta-button">Get Support</Link>
-        )}
+        <a href="https://docs.near.org" className="cta-button">Ready to build?</a>
       </nav>
     </header>
   )
