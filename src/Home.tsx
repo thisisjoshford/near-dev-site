@@ -94,11 +94,17 @@ function Home() {
           <div className="section-title">
             <h2>What is NEAR Dev?</h2>
             <p>NEAR Dev is the technical services team for the NEAR ecosystem. We provide core developer tooling and infrastructure, along with dedicated expert support, to help projects and partners succeed.</p>
-            <br/>
-            <h3>Our Connection to DevHub</h3>
-            <p>DevHub is a community initiative where developers build for other developers — sharing ideas, tools, and projects to grow the NEAR ecosystem. It’s like a town square full of collaboration and creativity.</p> 
-            <br/>
-            <p> NEAR Dev works alongside this community like a municipal services department: ensuring the critical infrastructure works, key services are maintained, and partners get the dedicated support they need.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* DevHub Connection Section */}
+      <section className="devhub-connection">
+        <div className="container">
+          <div className="section-title">
+            <h2>Our Connection to DevHub</h2>
+            <p>DevHub is a community initiative where developers build for other developers — sharing ideas, tools, and projects to grow the NEAR ecosystem. It's like a town square full of collaboration and creativity.</p>
+            <p>NEAR Dev works alongside this community like a municipal services department: ensuring the critical infrastructure works, key services are maintained, and partners get the dedicated support they need.</p>
           </div>
         </div>
       </section>

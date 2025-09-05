@@ -161,6 +161,24 @@ nav {
   text-align: center;
 }
 
+/* DevHub Connection Section */
+.devhub-connection {
+  padding: 4rem 0;
+  background: #111111;
+  color: #ffffff;
+  text-align: center;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+.devhub-connection .section-title p {
+  margin-bottom: 1.5rem;
+}
+
+.devhub-connection .section-title p:last-child {
+  margin-bottom: 0;
+}
+
 .about-home .section-title {
   margin-bottom: 2rem;
 }
