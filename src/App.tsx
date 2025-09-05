@@ -46,14 +46,14 @@ function Header() {
         <ul className="nav-links">
           {isHomePage ? (
             <>
+              <li><a href="#about" onClick={(e) => handleSmoothScroll(e, '#about')}>About</a></li>
               <li><a href="#services" onClick={(e) => handleSmoothScroll(e, '#services')}>Services</a></li>
-              <li><a href="#process" onClick={(e) => handleSmoothScroll(e, '#process')}>Process</a></li>
               <li><a href="#contact" onClick={(e) => handleSmoothScroll(e, '#contact')}>Contact</a></li>
             </>
           ) : (
             <>
+              <li><Link to="/#about">About</Link></li>
               <li><Link to="/#services">Services</Link></li>
-              <li><Link to="/#process">Process</Link></li>
               <li><Link to="/#contact">Contact</Link></li>
             </>
           )}

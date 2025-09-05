@@ -89,7 +89,7 @@ function Home() {
       </section>
 
       {/* About Section */}
-      <section className="about-home">
+      <section id="about" className="about-home">
         <div className="container">
           <div className="section-title">
             <h2>What is NEAR Dev?</h2>
@@ -113,84 +113,38 @@ function Home() {
           <div className="services-grid">
             <div className="service-card">
               <div className="service-header">
-                <div className="service-icon">📝</div>
-                <h3>Technical Content</h3>
-              </div>
-              <p>High-quality documentation, tutorials, and examples to accelerate the development process.</p>
-              <ul className="service-features">
-                <li>Comprehensive developer documentation</li>
-                <li>Step-by-step tutorials and guides</li>
-                <li>Code examples and best practices</li>
-              </ul>
-            </div>
-            <div className="service-card">
-              <div className="service-header">
                 <div className="service-icon">🛠️</div>
                 <h3>Technical Support</h3>
               </div>
-              <p>Priority technical support to keep your projects moving forward.</p>
-              <ul className="service-features">
-                <li>Architecture review and recommendations</li>
-                <li>Rapid issue diagnosis and resolution</li>
-                <li>Integration and SDK implementation support</li>
-              </ul>
+              <p>Dedicated expert support for top ecosystem partners.</p>
+            </div>
+            <div className="service-card">
+              <div className="service-header">
+                <div className="service-icon">⚙️</div>
+                <h3>Tooling and Infrastructure</h3>
+              </div>
+              <p>Maintaining and improving core developer SDKs, tooling, and infrastructure.</p>
+            </div>
+            <div className="service-card">
+              <div className="service-header">
+                <div className="service-icon">📝</div>
+                <h3>Technical Content</h3>
+              </div>
+              <p>Creating high-quality documentation, tutorials, and examples to accelerate the development process.</p>
             </div>
             <div className="service-card">
               <div className="service-header">
                 <div className="service-icon">🎯</div>
                 <h3>Event Support</h3>
               </div>
-              <p>On-site technical presence, workshops, and mentorship for community events and conferences.</p>
-              <ul className="service-features">
-                <li>Workshop facilitation</li>
-                <li>Hackathon judging and mentorship</li>
-                <li>Conference representation</li>
-                <li>Community engagement</li>
-              </ul>
+              <p>On-site technical workshops and mentorship for hackathons, conferences, and community events.</p>
             </div>
             <div className="service-card">
               <div className="service-header">
                 <div className="service-icon">⚡</div>
-                <h3>Solutions Development</h3>
+                <h3>Custom Solutions</h3>
               </div>
-              <p>Custom software solutions designed to address your specific technical needs and challenges.</p>
-              <ul className="service-features">
-                <li>Building new tools and features</li>
-                <li>External service integrations</li>
-                <li>Proof-of-concept development</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section id="process" className="process">
-        <div className="container">
-          <div className="section-title">
-            <h2>How We Work Together</h2>
-            <p>Our streamlined process ensures you get the technical support you need, when you need it</p>
-          </div>
-          <div className="process-steps">
-            <div className="process-step">
-              <div className="step-number">1</div>
-              <h4>Initial Contact</h4>
-              <p>Reach out through our dedicated channels - we respond within 24 hours on business days</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">2</div>
-              <h4>Project Assessment</h4>
-              <p>We review your technical scope, requirements, and determine the best approach for your needs</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">3</div>
-              <h4>Dedicated Support</h4>
-              <p>Get assigned a dedicated account owner and establish project-specific communication channels</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">4</div>
-              <h4>Collaborative Development</h4>
-              <p>Work together as an extension of your team with ongoing support and solution development</p>
+              <p>Building ecosystem-critical software such as NEAR Treasury.</p>
             </div>
           </div>
         </div>
