@@ -755,20 +755,22 @@ footer p {
   .terminal-body {
     padding: 16px;
     font-size: 14px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .terminal-prompt {
-    display: block;
-    width: 100%;
-    margin-bottom: 4px;
+    display: inline;
+    white-space: nowrap;
+    margin-right: 4px;
   }
 
   .typed-element {
-    display: block;
-    width: 100%;
-    padding-left: 0;
+    display: inline;
+    white-space: nowrap;
   }
 }
 
