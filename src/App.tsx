@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Home from './Home'
-import About from './About'
 import './App.css'
 
 function Header() {
@@ -45,7 +44,6 @@ function Header() {
           NEAR Dev
         </Link>
         <ul className="nav-links">
-          <li><Link to="/about">About</Link></li>
           {isHomePage ? (
             <>
               <li><a href="#services" onClick={(e) => handleSmoothScroll(e, '#services')}>Services</a></li>
@@ -87,7 +85,6 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
         </Routes>
       </main>
       <Footer />

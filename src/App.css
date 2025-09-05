@@ -20,13 +20,11 @@ nav {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #0088ff, #0066cc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: white;
 }
 
 .logo-icon {
